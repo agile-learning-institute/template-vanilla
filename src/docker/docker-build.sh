@@ -1,6 +1,12 @@
 #!/bin/bash
 
-# Build Docker Image
+echo "Ensure we are running in the proper folder"
+if !([[ -d "./src/docker" ]] && [[ -f "./src/TODO:SomeFile" ]]); then 
+    echo "This script must be run from the repository root folder"
+    exit 1
+fi
+
+echo "Building Docker Image"
 docker build --file src/docker/Dockerfile --tag ghcr.io/agile-learning-institute/mentorhub-<<TODO:domaion>>-<<TODO:component>>:latest .
 if [ $? -ne 0 ]; then
     echo "Docker build failed"
@@ -8,4 +14,4 @@ if [ $? -ne 0 ]; then
 fi
 
 # Run the containers
-curl https://raw.githubusercontent.com/agile-learning-institute/mentorhub/main/docker-compose/<<run-local-TODO:.sh | /bin/bash
+mh up TODO:package
