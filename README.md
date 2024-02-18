@@ -1,3 +1,5 @@
+># Search ALL files for "TODO:" and address task
+
 # <<TODO:domain>>-<<TODO:component>>
 
 This is repository contains <<TODO:service-description>>
