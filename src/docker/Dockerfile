@@ -1,5 +1,3 @@
-# From an Offical Image TODO: Update this file!
-FROM baseimage:stable
+TODO: Create Dockerfile here. 
 
-# Copy files in
-COPY ./src/* /src/
+See https://github.com/agile-learning-institute/mentorHub/tree/main/docker-configurations for templates.
